@@ -6,6 +6,7 @@ const session = require('express-session')
 const Usuario = require('./model/usuario');
 const Equipamento = require('./model/equipamento')
 const { json } = require('body-parser');
+const port = process.env.PORT || 3000
 
 app.use(session({secret:'kfjfjfjblwjkjrl'}))
 app.use(express.static('public'));
@@ -96,6 +97,6 @@ app.post('/cadEquipamento', (req, res) =>{
     })    
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Servidor rodando");
 })
