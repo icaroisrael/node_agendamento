@@ -1,0 +1,33 @@
+<div id="conteudo" class="mb-3">
+    <h1>Cadastro de Equipamentos</h1>
+    <table>
+        <form action="/cadEquipamento" method="POST">          
+            <tr>
+                <td><label for="exampleFormControlInput1" class="form-label">DESCRIÇÃO: </label></td>
+                <td><input type="text" size="50" class="form-control" name="descricao" placeholder="descricao"></td>
+            </tr>           
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-primary" value="Cadastrar"></td>
+            </tr>      
+        </form>
+    </table>
+    
+</div>
+<div id="conteudo">
+    <h1 id="con">Listagem de Equipamentos</h1>
+    <table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+        <th>CODIGO</th>
+        <th>DESCRICAO</th>              
+    </tr>
+    </thead>    
+    {{#each equipamentos}}
+    <tr>        
+        <td>{{codigo}}</td>
+        <td>{{descricao}}</td>                   
+    </tr>
+    {{/each}}
+</table>
+</div>

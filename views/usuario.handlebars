@@ -1,0 +1,55 @@
+<div id="conteudo" class="mb-3">
+    <h1>Cadastro de Professores</h1>
+    <table>
+        <form action="/cadastro" method="POST">
+            <tr>
+                <td><label for="exampleFormControlInput1" class="form-label">CPF: </label></td>
+                <td><input type="text" class="form-control" name="cpf" placeholder="111.111.111-11"></td>
+            </tr>
+            <tr>
+                <td><label for="exampleFormControlInput1" class="form-label">NOME: </label></td>
+                <td><input type="text" class="form-control" name="nome" placeholder="nome"></td>
+            </tr>
+            <tr>
+                <td><label for="exampleFormControlInput1" class="form-label">SOBRENOME: </label></td>
+                <td><input type="text" class="form-control" name="sobreNome" placeholder="sobreNome" placeholder="sobreNome"></td>
+            </tr>
+            <tr>
+                <td><label for="exampleFormControlInput1" class="form-label">EMAIL</label></td>
+                <td><input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="nome@exemplo.com"></td>
+            </tr>
+            <tr>
+                <td><label for="exampleFormControlInput1" class="form-label">SENHA:</label> </td>
+                <td><input type="password" class="form-control" name="senha" id="inputPassword"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" class="btn btn-primary" value="Cadastrar"></td>
+            </tr>      
+        </form>
+    </table>
+    
+</div>
+<div id="conteudo">
+    <h1 id="con">Listagem de Professores</h1>
+    <table class="table table-hover">
+    <thead class="table-dark">
+        <tr>
+        <th>CPF</th>
+        <th>NOME</th>
+        <th>SOBRENOME</th>
+        <th>EMAIL</th>
+        <th>SENHA</th>        
+    </tr>
+    </thead>    
+    {{#each usuarios}}
+    <tr>        
+        <td>{{cpf}}</td>
+        <td>{{nome}}</td>
+        <td>{{sobreNome}}</td>
+        <td>{{email}}</td> 
+        <td>{{senha}}</td>             
+    </tr>
+    {{/each}}
+</table>
+</div>
